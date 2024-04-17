@@ -33,14 +33,14 @@ export default function NavWrapper({ children }: {
           </div>
         </Link>
         <div className="flex items-center uppercase px-2 lg:p-8 space-x-8 min-w-0 min-h-0 overflow-x-auto overflow-y-visible no-scrollbar">
-          <Link href="/blog">
+          <Link href="/start">
             <li
               className={cn("font-mono px-2 py-1 list-none border hover:text-terminal-magenta hover:bg-transparent border-terminal-magenta bg-terminal-magenta text-black")}
             >
               GET STARTED
             </li>
           </Link>
-          <Link href="/blog">
+          {/* <Link href="/blog">
             <li
               className={cn("font-mono list-none hover:text-terminal-magenta", {
                 "text-terminal-magenta": ("/blog" in pathname),
@@ -49,13 +49,10 @@ export default function NavWrapper({ children }: {
             >
               DOCUMENTATION
             </li>
-          </Link>
-          <Link href="/blog">
+          </Link> */}
+          <Link href="https://github.com/hdresearch/nolita">
             <li
-              className={cn("font-mono list-none hover:text-terminal-magenta", {
-                "text-terminal-magenta": ("/blog" in pathname),
-                "text-white": !("/blog" in pathname),
-              })}
+              className="font-mono list-none text-white hover:text-terminal-magenta"
             >
               SOURCE
             </li>
@@ -74,16 +71,16 @@ export default function NavWrapper({ children }: {
             <p className="font-sans font-medium">
               Nolita
             </p>
-            <p className="text-sm tracking-tight">A product of <Link className="border-b border-black hover:border-terminal-magenta" href="https://hdr.is">High Dimensional Research</Link>.</p>
+            <p className="text-sm tracking-tight">A product of <Link className="border-b border-black" href="https://hdr.is">High Dimensional Research</Link>.</p>
           </div>
           <div className="pt-8 flex flex-col text-3xl font-sans tracking-tight font-light">
             <Link href="/start">
               Get Started
             </Link>
-            <Link href="/start">
+            {/* <Link href="/start">
               Documentation
-            </Link>
-            <Link href="/start">
+            </Link> */}
+            <Link href="https://github.com/hdresearch/nolita">
               Source
             </Link>
           </div>

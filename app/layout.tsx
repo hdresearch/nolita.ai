@@ -12,34 +12,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  className,
-  style,
-  paddingWide = true,
-  paddingTop = true,
-  flex = true,
 }: Readonly<{
   children: React.ReactNode;
-  className?: string;
-  style?: React.CSSProperties;
-  paddingWide?: boolean;
-  paddingTop?: boolean;
-  flex?: boolean;
 }>) {
   return (
     <html lang="en">
       <body>
         <NavWrapper>
           <main
-          className={classNames(
-            "min-h-0 h-full w-full bg-deep-slate text-gray-300 relative no-scrollbar flex-1",
-            className,
-            {
-              "px-8": paddingWide,
-              "pt-32 pb-16": paddingTop,
-              "flex flex-col": flex,
-            },
-          )}
-          style={{ ...style }}
+          className="min-h-0 h-full w-full bg-deep-slate text-gray-300 relative no-scrollbar flex-1"
         >
           {children}
         </main>

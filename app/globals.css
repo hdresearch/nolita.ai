@@ -2,18 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+::selection {
+  @apply bg-terminal-magenta text-black;
 }
 
 body {
-  @apply antialiased;
+  @apply antialiased bg-black;
+}
+
+.screen::after {
+  position: fixed;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size: 100% 2px, 3px 100%;
+  z-index: 30;
+  pointer-events: none;
+}
+
+footer a {
+  @apply hover:text-terminal-magenta;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .screen-fadein {
+    animation: 0.5s appearWithBg ease-out forwards;
+  }
+  @keyframes appearWithBg {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
