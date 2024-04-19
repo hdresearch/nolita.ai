@@ -4,7 +4,7 @@ export default function Start() {
     return (
     <div className="min-h-screen bg-deep-slate pt-24 pb-8">
         <div className="border-t-0 lg:border-t border-gray-700 h-full w-full grid grid-cols-3">
-            <div className="col-span-1 col-start-2 space-y-4 text-justify">
+            <div className="col-span-full lg:col-span-1 lg:col-start-2 px-8 lg:px-0 space-y-4 text-justify">
                 <h2 className="font-mono text-gray-400 pt-4 text-4xl tracking-tight">{"//get started"}</h2>
                 <p>If you just want to get started using Nolita, you can run it using <code>npx</code>:</p>
                 <code className="block border-y border-gray-700 py-2 text-xs">npx nolita</code>
