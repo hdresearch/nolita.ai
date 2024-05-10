@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import classNames from "classnames";
 import "./style/font.css";
 import "./globals.css";
 import NavWrapper from "./components/Nav";
@@ -29,7 +28,7 @@ export default function RootLayout({
       <body>
         <NavWrapper>
           <main
-          className="min-h-0 h-full w-full bg-deep-slate text-gray-300 relative no-scrollbar flex-1"
+          className="min-h-0 min-h-screen h-full w-full bg-deep-slate text-gray-300 relative no-scrollbar flex-1"
         >
           {children}
         </main>

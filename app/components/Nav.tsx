@@ -40,7 +40,7 @@ export default function NavWrapper({ children }: {
               GET STARTED
             </li>
           </Link>
-          {/* <Link href="/blog">
+          <Link href="/docs">
             <li
               className={cn("font-mono list-none hover:text-terminal-magenta", {
                 "text-terminal-magenta": ("/blog" in pathname),
@@ -49,7 +49,7 @@ export default function NavWrapper({ children }: {
             >
               DOCUMENTATION
             </li>
-          </Link> */}
+          </Link>
           <Link href="https://github.com/hdresearch/nolita">
             <li
               className="font-mono list-none text-white hover:text-terminal-magenta"
@@ -77,9 +77,9 @@ export default function NavWrapper({ children }: {
             <Link href="/start">
               Get Started
             </Link>
-            {/* <Link href="/start">
+            <Link href="/docs">
               Documentation
-            </Link> */}
+            </Link>
             <Link href="https://github.com/hdresearch/nolita">
               Source
             </Link>
