@@ -1,0 +1,25 @@
+.markdown {
+    @apply max-w-prose w-full;
+
+    & pre code {
+        @apply bg-gray-700 p-1 rounded w-full block text-sm;
+    }
+    & code {
+        @apply bg-gray-700 p-1 rounded;
+    }
+    & p {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    & h2 {
+        font-size: 1.75em;
+        margin-top: 1.75em;
+    }
+    & h2:first-of-type {
+        margin-top: 0;
+    }
+    & h3 {
+        font-size: 1.5em;
+        margin-top: 1.5em;
+    }
+}
