@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./style/font.css";
 import "./globals.css";
+import "./style/markdown.css";
 import NavWrapper from "./components/Nav";
 
 
