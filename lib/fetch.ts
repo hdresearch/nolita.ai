@@ -43,5 +43,6 @@ export function buildPageTree(directoryPath: string, rootPath: string = director
     }
   });
 
+  pages.sort((a, b) => a.children.length - b.children.length);
   return pages;
 }
