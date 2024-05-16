@@ -10,7 +10,14 @@ async function readPostFile(slug: string) {
   try {
     await access(filePath);
   } catch (err) {
-    return null;
+    const fallbackFilePath = path.resolve(path.join(POSTS_FOLDER, `${slug}/page.mdx`).replace(',','/'));
+    try {
+      await access(fallbackFilePath);
+    } catch (fallbackErr) {
+      return null;
+    }
+    const fallbackFileContent = await readFile(fallbackFilePath, { encoding: "utf8" });
+    return fallbackFileContent;
   }
 
   const fileContent = await readFile(filePath, { encoding: "utf8" });
@@ -33,8 +40,6 @@ export default async function PostPage({
     source: markdown,
     options: { parseFrontmatter: true },
   });
-
-  // do something with frontmatter, like set metadata or whatever
 
   return <>{content}</>;
 }
