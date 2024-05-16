@@ -8,7 +8,7 @@ const nextConfig = {
         return [
             {
                 source: '/start',
-                destination: '/docs/start',
+                destination: '/docs/get-started',
                 permanent: true,
             },
         ];
