@@ -2,6 +2,7 @@
 import { Page } from "@/lib/fetch";
 import { useEffect, useState } from "react";
 import { usePathname } from 'next/navigation';
+import Link from "next/link";
 
 export default function DocsNavigation({ files }: Readonly<{ files: Page[] }>) {
     return (
@@ -32,7 +33,7 @@ function NavDirectory ({ file, className = "" }: Readonly<{ file: Page, classNam
 
     return (
         <li className={className}>
-            <button className="text-lg lg:text-3xl tracking-tight font-light text-left hover:text-terminal-gray" onClick={() => setIsOpen(!isOpen)}>{file.title}</button>
+            <button className="text-lg tracking-tight text-left hover:text-terminal-gray" onClick={() => setIsOpen(!isOpen)}>{file.title}</button>
             {isOpen && (
                 <ul>
                     {file.children.map((child) => {
@@ -50,8 +51,8 @@ function NavDirectory ({ file, className = "" }: Readonly<{ file: Page, classNam
 
 function NavPage ({ file, className = "" }: Readonly<{ file: Page, className?: string }>) {
     return (
-        <li className={className + " hover:text-terminal-magenta cursor-pointer text-xs lg:text-xl"}>
-            <a href={`/docs${file.path}`}>{file.title}</a>
+        <li className={className + " hover:text-terminal-magenta font-light cursor-pointer text-lg"}>
+            <Link href={`/docs${file.path}`}>{file.title}</Link>
         </li>
     );
 }
