@@ -40,16 +40,13 @@ export default function NavWrapper({ children }: {
               GET STARTED
             </li>
           </Link>
-          {/* <Link href="/blog">
+          <Link href="https://docs.nolita.ai">
             <li
-              className={cn("font-mono list-none hover:text-terminal-magenta", {
-                "text-terminal-magenta": ("/blog" in pathname),
-                "text-white": !("/blog" in pathname),
-              })}
+              className={cn("font-mono list-none text-white hover:text-terminal-magenta")}
             >
               DOCUMENTATION
             </li>
-          </Link> */}
+          </Link>
           <Link href="https://github.com/hdresearch/nolita">
             <li
               className="font-mono list-none text-white hover:text-terminal-magenta"
@@ -77,9 +74,9 @@ export default function NavWrapper({ children }: {
             <Link href="/start">
               Get Started
             </Link>
-            {/* <Link href="/start">
+            <Link href="https://docs.nolita.ai">
               Documentation
-            </Link> */}
+            </Link>
             <Link href="https://github.com/hdresearch/nolita">
               Source
             </Link>
