@@ -40,6 +40,13 @@ export default function NavWrapper({ children }: {
               GET STARTED
             </li>
           </Link>
+          <Link href="/memory">
+            <li
+              className={cn("font-mono list-none text-white hover:text-terminal-magenta")}
+            >
+              MEMORY
+            </li>
+          </Link>
           <Link href="https://docs.nolita.ai">
             <li
               className={cn("font-mono list-none text-white hover:text-terminal-magenta")}
@@ -73,6 +80,9 @@ export default function NavWrapper({ children }: {
           <div className="pt-8 flex flex-col text-3xl font-sans tracking-tight font-light">
             <Link href="/start">
               Get Started
+            </Link>
+            <Link href="/memory">
+              Memory
             </Link>
             <Link href="https://docs.nolita.ai">
               Documentation

@@ -1,6 +1,6 @@
 export default function VectorField({ stage = 0 }) {
     return (
-        <svg className="absolute top-0 left-0 h-screen w-screen" width="762" height="675" viewBox="0 0 762 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute top-0 left-0 h-full w-screen" width="762" height="675" viewBox="0 0 762 675" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 11L12.3094 5.26795L7.6906 8.73205L13 11ZM0.6 -4.7L9.9 7.7L10.7 7.1L1.4 -5.3L0.6 -4.7Z" fill="white" fillOpacity={stage % 3 === 0 ? "1" : "0.1"} />
             <path d="M52.094 11.641L51.7224 5.87947L46.9186 9.08204L52.094 11.641ZM40.584 -4.72265L49.1818 8.17413L50.0139 7.61943L41.416 -5.27735L40.584 -4.72265Z" fill="white" fillOpacity={stage % 2 === 0 ? "1" : "0.1"} />
             <path d="M91.0774 12.2756L91.0516 6.50213L86.0646 9.41123L91.0774 12.2756ZM80.5681 -4.74806L88.3781 8.64051L89.2419 8.13664L81.4319 -5.25194L80.5681 -4.74806Z" fill="white" fillOpacity={stage % 3 === 0 ? "1" : "0.1"} />
