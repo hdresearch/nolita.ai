@@ -3,6 +3,7 @@ import VectorField from "../components/VectorField";
 import classNames from "classnames";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { redirect } from "next/navigation";
 
 interface StateStep {
     success: boolean;
@@ -13,6 +14,7 @@ interface StateStep {
 export default function Memory() {
     const [stateLog, setStateLog] = useState<StateStep[]>([]);
     const [stage, setStage] = useState(1);
+    redirect("/404");
 
     useEffect(() => {
         const state = [

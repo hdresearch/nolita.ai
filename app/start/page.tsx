@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function Start() {
+    redirect("/404");
     return (
     <div className="min-h-screen bg-deep-slate pt-24 pb-8">
         <div className="border-t-0 lg:border-t border-gray-700 h-full w-full grid grid-cols-3">
