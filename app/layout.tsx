@@ -27,13 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavWrapper>
           <main
           className="min-h-0 h-full w-full bg-deep-slate text-gray-300 relative no-scrollbar flex-1"
         >
           {children}
         </main>
-      </NavWrapper>
     </body>
     </html>
   );
